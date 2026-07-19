@@ -1,122 +1,1 @@
-\# Phishing Email Analysis
-
-
-
-\*\*Analysis of a simulated phishing email demonstrating spoofing, social engineering, and malicious link identification.\*\*
-
-
-
-\## Background
-
-Phishing remains one of the most common initial access vectors used in real-world attacks, relying on social engineering rather than technical exploits to trick a user into handing over credentials or executing malicious content. This project simulates the triage process a SOC/IT security analyst would follow when a suspicious email is reported by a user.
-
-
-
-\## Objective
-
-Analyze a sample phishing email to identify indicators of compromise (IOCs) and social engineering tactics, and document a triage process consistent with real-world analyst workflows.
-
-
-
-\## Scope \& Methodology
-
-The analysis follows a standard triage approach:
-
-1\. Sender/domain legitimacy check
-
-2\. Header/reply-path inspection
-
-3\. Embedded link and TLD analysis
-
-4\. Content/pretext analysis for social engineering patterns
-
-5\. Recommended response actions
-
-
-
-\## Tools Used
-
-\- Manual header/domain inspection
-
-\- Social engineering pattern recognition
-
-\- (In a live environment, this stage would also involve VirusTotal for link/attachment reputation checks and an email header analyzer such as MXToolbox)
-
-
-
-\## Sample Email
-
-
-
-```text
-
-From: IT-Support@paypa1-secure.com
-
-Subject: URGENT: Your Account Will Be Suspended
-
-Reply-To: support@totally-legit-mail.ru
-
-Link: http://paypal-secure-verify.tk/login
-
-```
-
-
-
-\## Steps
-
-1\. Reviewed sender domain for spoofing (typosquatting check)
-
-2\. Compared From address against Reply-To domain for mismatch
-
-3\. Inspected embedded link structure, TLD, and protocol
-
-4\. Analyzed pretext/language for social engineering tactics
-
-5\. Mapped findings to standard phishing indicators used in analyst triage
-
-
-
-\## Findings
-
-
-
-| Indicator | Observation | Why It Matters |
-
-|---|---|---|
-
-| Sender domain | `paypa1-secure.com` uses "1" instead of "l" | Typosquatting — mimics PayPal's real domain to deceive at a glance; a common technique to bypass casual user scrutiny |
-
-| Reply-To mismatch | Reply-To is `totally-legit-mail.ru`, unrelated to PayPal | Legitimate companies don't route replies through unrelated domains — this is a strong technical spoofing indicator that survives even if the display name looks convincing |
-
-| Link structure | `http://paypal-secure-verify.tk/login` | Uses `.tk`, a free TLD heavily abused for phishing due to low registration barriers, and lacks HTTPS — no legitimate financial institution would use either |
-
-| Pretext/language | Urgency ("24 hours"), threat ("permanent suspension"), generic greeting | Classic social engineering pressure tactics designed to trigger fast, emotional action instead of careful evaluation — a hallmark of mass-distributed phishing rather than a targeted attack |
-
-
-
-\## Recommended Response
-
-If this email were reported by a user in a real environment, standard next steps would include:
-
-\- Do not click the link or reply to the message
-
-\- Report the email to the security team / submit for blocklisting
-
-\- Search mail logs for other recipients of the same sender/subject to assess campaign scope
-
-\- Block the sender domain and malicious URL at the email gateway/firewall
-
-\- Notify affected users if any credentials may have been entered
-
-
-
-\## Key Takeaway
-
-This exercise demonstrates the ability to identify spoofing indicators, analyze sender legitimacy, and recognize social engineering tactics used in phishing campaigns — core triage skills for a SOC or IT security analyst role.
-
-
-
-\## Note
-
-This is a constructed training example illustrating common phishing indicators, used for demonstration purposes.
-
+\# Phishing Email Analysis\*\*Analysis of a simulated phishing email demonstrating spoofing, social engineering, and malicious link identification.\*\*\## BackgroundPhishing remains one of the most common initial access vectors used in real-world attacks, relying on social engineering rather than technical exploits to trick a user into handing over credentials or executing malicious content. This project simulates the triage process a SOC/IT security analyst would follow when a suspicious email is reported by a user.\## ObjectiveAnalyze a sample phishing email to identify indicators of compromise (IOCs) and social engineering tactics, and document a triage process consistent with real-world analyst workflows.\## Scope \& MethodologyThe analysis follows a standard triage approach:1\. Sender/domain legitimacy check2\. Header/reply-path inspection3\. Embedded link and TLD analysis4\. Content/pretext analysis for social engineering patterns5\. Recommended response actions\## Tools Used\- Manual header/domain inspection\- Social engineering pattern recognition\- (In a live environment, this stage would also involve VirusTotal for link/attachment reputation checks and an email header analyzer such as MXToolbox)\## Sample Email```textFrom: IT-Support@paypa1-secure.comSubject: URGENT: Your Account Will Be SuspendedReply-To: support@totally-legit-mail.ruLink: http://paypal-secure-verify.tk/login```\## Steps1\. Reviewed sender domain for spoofing (typosquatting check)2\. Compared From address against Reply-To domain for mismatch3\. Inspected embedded link structure, TLD, and protocol4\. Analyzed pretext/language for social engineering tactics5\. Mapped findings to standard phishing indicators used in analyst triage\## Findings| Indicator | Observation | Why It Matters ||---|---|---|| Sender domain | `paypa1-secure.com` uses "1" instead of "l" | Typosquatting — mimics PayPal's real domain to deceive at a glance; a common technique to bypass casual user scrutiny || Reply-To mismatch | Reply-To is `totally-legit-mail.ru`, unrelated to PayPal | Legitimate companies don't route replies through unrelated domains — this is a strong technical spoofing indicator that survives even if the display name looks convincing || Link structure | `http://paypal-secure-verify.tk/login` | Uses `.tk`, a free TLD heavily abused for phishing due to low registration barriers, and lacks HTTPS — no legitimate financial institution would use either || Pretext/language | Urgency ("24 hours"), threat ("permanent suspension"), generic greeting | Classic social engineering pressure tactics designed to trigger fast, emotional action instead of careful evaluation — a hallmark of mass-distributed phishing rather than a targeted attack |\## Recommended ResponseIf this email were reported by a user in a real environment, standard next steps would include:\- Do not click the link or reply to the message\- Report the email to the security team / submit for blocklisting\- Search mail logs for other recipients of the same sender/subject to assess campaign scope\- Block the sender domain and malicious URL at the email gateway/firewall\- Notify affected users if any credentials may have been entered\## Key TakeawayThis exercise demonstrates the ability to identify spoofing indicators, analyze sender legitimacy, and recognize social engineering tactics used in phishing campaigns — core triage skills for a SOC or IT security analyst role.\## NoteThis is a constructed training example illustrating common phishing indicators, used for demonstration purposes.
