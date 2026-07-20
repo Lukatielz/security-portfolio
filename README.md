@@ -10,7 +10,7 @@
 
 # \- Email: lucascorrea1802@gmail.com
 
-# \- LinkedIn: \https://www.linkedin.com/in/lucas-correa-5b653121b/
+# \- LinkedIn: https://www.linkedin.com/in/lucas-correa-5b653121b/
 
 # \- Location: Porto, Portugal (open to relocation)
 
@@ -60,7 +60,11 @@
 
 # \- \[Phishing Email Analysis](./phishing-email-analysis) — Identified spoofing, header mismatches, and social engineering indicators in a simulated phishing email.
 
-# \- \[PCAP Malware Analysis](./pcap-malware-analysis) — In progress
+# \- \[PCAP Malware Analysis](./pcap-malware-analysis) — Identified C2 beaconing behavior in a malware-infected host's network traffic using Wireshark, corroborated with DNS, VirusTotal, and WHOIS data.
 
-# \-
+# \- \[Vulnerability Assessment](./vulnerability-assessment) — Scanned an intentionally vulnerable web app with OpenVAS/GVM, identified an EOL OS and 4 other findings, and produced a prioritized remediation plan.
+
+# \- \[SIEM Detection Lab](./siem-detection-lab) — In progress
+
+# \- \[Scripts](./scripts) — Automation scripts, in progress
 
